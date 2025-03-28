@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <style>
+    body{
+        background-color: #dcccff;
+    }
+    .container {
+      display: block;
+      margin: 50px auto;
+      border: 2px double #000;
+      width: 400px;
+      border-radius: 10px;
+      padding: 10px 20px;
+      background-color: #a880ff;
+    }
+    .heading{
+        text-align: center;
+    }
+    .bulb-img {
+      width: 150px;
+      display: block;
+      margin: 10px auto;
+    }
+    .btn-container {
+      margin: 5px 10px;
+      display: flex;
+      justify-content: space-evenly;
+    }
+    .btn {
+      padding: 5px 20px;
+      border-radius: 10px;
+      margin: 20px;
+      font-weight: bold;
+    }
+  </style>
+  <body>
+    <h1 class="heading">BulbToggler</h1>
+    <div class="container">
+      <img
+        src="bulb-off.png"
+        alt="bult-off"
+        id="bulb-off"
+        class="bulb-img"
+      />
+      <div class="btn-container">
+        <button type="button" id="btn=on" class="btn" onclick="switchBulb('on')">On</button>
+        <button type="button" id="btn-off" class="btn" onclick="switchBulb('off')">Off</button>
+      </div>
+    </div>
+    <script>
+        function switchBulb(state){
+            const bulbElement = document.getElementById("bulb-off");
+            if(state === "on"){
+                bulbElement.src = "bulb-on.png";
+            }
+            else{
+                bulbElement.src = "bulb-off.png";
+            }
+        }
+    </script>
+  </body>
+</html>
